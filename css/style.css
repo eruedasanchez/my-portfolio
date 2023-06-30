@@ -5,3 +5,38 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+img, ion-icon, a, button, time, span {
+  display: block; }
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer; }
+
+input, textarea {
+  display: block;
+  width: 100%;
+  background: none;
+  font: inherit; }
+
+::selection {
+  background: #ffdb70;
+  color: #121212; }
+
+:focus {
+  outline-color: #ffdb70; }
+
+body {
+  background: #121212; }
+
+html {
+  font-family: "Poppins", sans-serif; }
