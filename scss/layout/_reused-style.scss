@@ -1,0 +1,43 @@
+.sidebar{
+    background: $eerie-black-2;
+    border: 1px solid $jet;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: $shadow-1;
+    z-index: 1;
+}
+
+.separator{
+    @include dimensions(100%, 1px);
+    background: $jet;
+    margin: 16px 0;
+}
+
+.icon-box{
+    position: relative;
+    background: $bg-gradient-onyx;
+    @include dimensions(30px, 30px);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: $orange-yellow-crayola;
+    box-shadow: $shadow-1;
+    z-index: 1;
+}
+
+.icon-box::before{
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: $eerie-black-1;
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.icon-box ion-icon{
+    --ionicon-stroke-width: 35px;
+}
+
+

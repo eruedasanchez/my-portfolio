@@ -15,7 +15,7 @@
     <body>
         <main>
             <!-- Inicio sidebar -->
-            <aside class="sidebar" data-sidebar>
+            <aside id="data-sidebar" class="sidebar">
                 <div class="sidebar-info">
                     <figure class="avatar-box">
                         <img src="./assets/img/my-avatar.png" alt="Ezequiel Rueda Sanchez" width="80">
@@ -24,11 +24,9 @@
                         <h1 class="name" title="Ezequiel Rueda Sanchez">Ezequiel Rueda Sanchez</h1>
                         <p class="title">Fullstack Developer</p>
                     </div>
-                    <button class="info-more-btn" data-sidebar-btn>
+                    <button id="data-sidebar-btn" class="info-more-btn">
                         <span>Show Contacts</span>
                         <ion-icon name="chevron-down"></ion-icon>
-                        
-
                     </button>
                 </div>
                 <div class="sidebar-info_more">
@@ -40,7 +38,7 @@
                             </div>
                             <div class="contact-info">
                                 <p class="contact-title">Email</p>
-                                <a href="mailto:ezequiel.ruedasanchez@gmail.com" class="contact-list">ezequiel.ruedasanchez@gmail.com</a>
+                                <a href="mailto:ezequiel.ruedasanchez@gmail.com" class="contact-link">ezequiel.ruedasanchez@gmail.com</a>
                             </div>
                         </li>
                         <li class="contact-item">
@@ -49,7 +47,7 @@
                             </div>
                             <div class="contact-info">
                                 <p class="contact-title">Phone</p>
-                                <a href="tel:1141973532" class="contact-list">+549-1141973532</a>
+                                <a href="tel:1141973532" class="contact-link">+54 9 11 41973532</a>
                             </div>
                         </li>
                         <li class="contact-item">
@@ -91,8 +89,9 @@
                     </ul>
                 </div>
             </aside>
-
             <!-- Fin sidebar -->
+
+            
         </main>
         
         <script src="./js/main.js"></script>
