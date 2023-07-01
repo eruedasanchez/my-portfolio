@@ -82,3 +82,42 @@ article.active{
     position: relative;
     padding-bottom: 7px;
 }
+
+// testimonials
+
+.has-scrollbar::-webkit-scrollbar{
+    @include dimensions(6px,6px);
+}
+
+.has-scrollbar::-webkit-scrollbar-track{
+    background: $onyx;
+    border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb{
+    background: $orange-yellow-crayola;
+    border-radius: 5px;
+}
+
+.has-scrollbar::-webkit-scrollbar-button{
+    width: 20px;
+}
+
+.content-card{
+    position: relative;
+    background: $bg-gradient-onyx;
+    padding: 15px;
+    padding-top: 45px;
+    border-radius: 14px;
+    box-shadow: $shadow-2;
+    z-index: 1;
+}
+
+.content-card::before{
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: $bg-gradient-jet;
+    border-radius: inherit;
+    z-index: -1;
+}
