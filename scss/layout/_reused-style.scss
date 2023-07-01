@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar, article{
     background: $eerie-black-2;
     border: 1px solid $jet;
     border-radius: 20px;
@@ -40,4 +40,45 @@
     --ionicon-stroke-width: 35px;
 }
 
+// about & service
 
+article{
+    display: none;
+}
+
+article.active{
+    display: block;
+    animation: fade 0.5s ease backwards;
+}
+
+@keyframes fade{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.h2, .h3, .h4, .h5{
+    color: $white-2;
+    text-transform: capitalize;
+}
+
+.h2{
+    font-size: $fs-1;
+}
+
+.h3{
+    font-size: $fs-2;
+}
+
+.h4{
+    font-size: $fs-4;
+}
+
+.h5{
+    font-size: $fs-7;
+    font-weight: 500;
+}
+
+.article-title{
+    position: relative;
+    padding-bottom: 7px;
+}
