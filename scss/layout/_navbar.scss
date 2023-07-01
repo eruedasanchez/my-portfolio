@@ -1,0 +1,36 @@
+.navbar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: hsla(240, 1%, 17%, 0.75);
+    backdrop-filter: blur(10%);
+    border: 1px solid $jet;
+    border-radius: 12px 12px 0 0;
+    box-shadow: $shadow-2;
+    z-index: 5;
+}
+
+.navbar-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.navbar-link{
+    color: $light-gray;
+    font-size: $fs-8;
+    padding: 20px 7px;
+    transition: color $transition-1;
+}
+
+.navbar-link:hover, .navbar-link:focus{
+    color: $light-gray-70;
+} 
+
+.navbar-link.active{
+    color: $orange-yellow-crayola;
+}
+

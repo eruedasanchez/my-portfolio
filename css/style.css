@@ -203,3 +203,34 @@ main {
 
 .social-item .social-link:hover {
   color: #d6d6d6; }
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(43, 43, 44, 0.75);
+  backdrop-filter: blur(10%);
+  border: 1px solid #383838;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+  z-index: 5; }
+
+.navbar-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px; }
+
+.navbar-link {
+  color: #d6d6d6;
+  font-size: 11px;
+  padding: 20px 7px;
+  transition: color 0.25s ease; }
+
+.navbar-link:hover, .navbar-link:focus {
+  color: rgba(214, 214, 214, 0.7); }
+
+.navbar-link.active {
+  color: #ffdb70; }
