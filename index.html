@@ -172,7 +172,7 @@
                         <h3 class="h3 testimonials-title">Testimonials</h3>
                         <ul class="testimonials-list has-scrollbar">
                             <li class="testimonials-item">
-                                <a href="#" class="content-card" data-testimonials-item>
+                                <div class="content-card">
                                     <figure class="testimonials-avatar-box">
                                         <img src="./assets/img/avatar-1.png" alt="Daniel Lewis" width="60" data-testimonials-avatar>
                                     </figure>
@@ -180,10 +180,10 @@
                                     <div class="testimonials-text">
                                         <p>Ezequiel was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.</p>
                                     </div>
-                                </a>
+                                </div>
                             </li>
                             <li class="testimonials-item">
-                                <a href="#" class="content-card" data-testimonials-item>
+                                <div class="content-card">
                                     <figure class="testimonials-avatar-box">
                                         <img src="./assets/img/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
                                     </figure>
@@ -191,10 +191,10 @@
                                     <div class="testimonials-text">
                                         <p>Ezequiel was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.</p>
                                     </div>
-                                </a>
+                                </div>
                             </li>
                             <li class="testimonials-item">
-                                <a href="#" class="content-card" data-testimonials-item>
+                                <div class="content-card">
                                     <figure class="testimonials-avatar-box">
                                         <img src="./assets/img/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
                                     </figure>
@@ -202,10 +202,10 @@
                                     <div class="testimonials-text">
                                         <p>Ezequiel was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.</p>
                                     </div>
-                                </a>
+                                </div>
                             </li>
                             <li class="testimonials-item">
-                                <a href="#" class="content-card" data-testimonials-item>
+                                <div class="content-card">
                                     <figure class="testimonials-avatar-box">
                                         <img src="./assets/img/avatar-4.png" alt="Henry William" width="60" data-testimonials-avatar>
                                     </figure>
@@ -213,11 +213,36 @@
                                     <div class="testimonials-text">
                                         <p>Ezequiel was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.</p>
                                     </div>
-                                </a>
+                                </div>
                             </li>
                         </ul>
                     </section>
                     <!-- Fin testimonials -->
+
+                    <!-- Inicio testimonials modal -->
+                    <div id="data-modal-container" class="modal-container">
+                        <div id="data-overlay" class="overlay"></div>
+                        <section class="testimonials-modal">
+                            <button id="data-modal-close-btn" class="modal-close-btn">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </button>
+                            <div class="modal-img-wrapper">
+                                <figure class="modal-avatar-box">
+                                    <img id="data-modal-img" src="./assets/img/avatar-1.png" alt="Daniel Lewis" width="80">
+                                </figure>
+                                <img src="./assets/img/icon-quote.svg" alt="quote icon">
+                            </div>
+                            <div class="modal-content">
+                                <h4 id="data-modal-title" class="h3 modal-title">Daniel Lewis</h4>
+                                <time datetime="2023-06-14">14 June, 2023</time>
+                                <div id="data-modal-text">
+                                    <p>Ezequiel was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Fin testimonials modal -->
                 </article>
             </div>
         </main>
