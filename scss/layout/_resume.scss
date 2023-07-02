@@ -38,10 +38,6 @@
     line-height: 1.6;
 }
 
-
-
-
-
 .timeline-item:not(:last-child)::before{
     content: "";
     position: absolute;

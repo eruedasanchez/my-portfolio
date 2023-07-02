@@ -593,3 +593,34 @@ main {
   color: #d6d6d6;
   font-weight: 300;
   line-height: 1.6; }
+
+.skills-title {
+  margin-bottom: 20px; }
+
+.skills-list {
+  padding: 20px; }
+
+.skills-item:not(:last-child) {
+  margin-bottom: 15px; }
+
+.skill .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px; }
+
+.skill .title-wrapper data {
+  color: #d6d6d6;
+  font-size: 13px;
+  font-weight: 300; }
+
+.skill-progress-bg {
+  background: #383838;
+  width: 100%;
+  height: 8px;
+  border-radius: 10px; }
+
+.skill-progress-fill {
+  background: linear-gradient(to right, #ffdb70, #ffbb5c);
+  height: 100%;
+  border-radius: inherit; }
