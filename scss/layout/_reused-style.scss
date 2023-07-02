@@ -111,6 +111,7 @@ article.active{
     border-radius: 14px;
     box-shadow: $shadow-2;
     z-index: 1;
+    cursor: pointer;
 }
 
 .content-card::before{
