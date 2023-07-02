@@ -507,3 +507,32 @@ main {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.6; }
+
+.clients {
+  margin-bottom: 15px; }
+
+.client-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0 -15px;
+  padding: 25px;
+  padding-bottom: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 25px; }
+
+.clients-item {
+  min-width: 50%;
+  scroll-snap-align: start; }
+
+.clients-item img {
+  width: 100%;
+  filter: grayscale(1);
+  transition: 0.25s ease; }
+
+.clients-item img:hover {
+  filter: grayscale(0); }
