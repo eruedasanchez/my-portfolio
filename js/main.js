@@ -47,5 +47,41 @@ overlay.addEventListener('click', () => {
     overlay.classList.toggle('active');
 });
 
+// custom select variables
 
+const select = document.getElementById('data-select');
+const selectItems = document.querySelectorAll('#data-select-item');
+const selectValue = document.getElementById('data-select-value');
 
+select.addEventListener('click', () => {
+    select.classList.toggle('active');
+});
+
+// add events in all select items
+
+selectItems.forEach(item => {
+    item.addEventListener('click', () => {
+        let selectedValue = this.innerText.toLowerCase();
+        selectValue.innerText = this.innerText;
+        
+        select.classList.toggle('active');
+        filterFunc(selectedValue);
+    });
+});
+
+// filter variables
+
+const filterItems = document.querySelectorAll("[data-filter-item]");
+
+const filterFunc = (selectedValue) => {
+    for(let i=0; i < filterItems.length; i++){
+        if(selectedValue === "all"){
+            filterItems[i].classList.add('active');
+        } else if(selectValue === filterItems[i].dataset.category){
+            filterItems[i].classList.add('active');
+        } else{
+            filterItems[i].classList.remove('active');
+
+        }
+    }
+}

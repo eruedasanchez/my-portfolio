@@ -412,24 +412,24 @@
                             </li>
                         </ul>
                         <div class="filter-select-box">
-                            <button class="filter-select" data-select>
-                                <div class="select-value" data-select-value>Select category</div>
+                            <button id="data-select" class="filter-select">
+                                <div id="data-select-value" class="select-value">Select category</div>
                                 <div class="select-icon">
                                     <ion-icon name="chevron-down"></ion-icon>
                                 </div>
                             </button>
                             <ul class="select-list">
                                 <li class="select-item">
-                                    <button data-select-item>All</button>
+                                    <button id="data-select-item">All</button>
                                 </li>
                                 <li class="select-item">
-                                    <button data-select-item>Web design</button>
+                                    <button id="data-select-item">Web design</button>
                                 </li>
                                 <li class="select-item">
-                                    <button data-select-item>Applications</button>
+                                    <button id="data-select-item">Applications</button>
                                 </li>
                                 <li class="select-item">
-                                    <button data-select-item>Web development</button>
+                                    <button id="data-select-item">Web development</button>
                                 </li>
                             </ul>
                         </div>
@@ -442,11 +442,11 @@
                                         </div>
                                         <img src="./assets/img/project-1.jpg" alt="finance" loading="lazy">
                                     </figure>
-                                    <h3 class="project title">Finance</h3>
+                                    <h3 class="project-title">Finance</h3>
                                     <p class="project-category">Web development</p>
                                 </a>
                             </li>
-                            <li class="project-item" data-filter-item data-category="web development">
+                            <li class="project-item active" data-filter-item data-category="web development">
                                 <a href="#">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box">
@@ -454,11 +454,11 @@
                                         </div>
                                         <img src="./assets/img/project-2.png" alt="orizon" loading="lazy">
                                     </figure>
-                                    <h3 class="project title">Orizon</h3>
+                                    <h3 class="project-title">Orizon</h3>
                                     <p class="project-category">Web development</p>
                                 </a>
                             </li>
-                            <li class="project-item" data-filter-item data-category="web design">
+                            <li class="project-item active" data-filter-item data-category="web design">
                                 <a href="#">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box">
@@ -466,11 +466,11 @@
                                         </div>
                                         <img src="./assets/img/project-3.jpg" alt="fundo" loading="lazy">
                                     </figure>
-                                    <h3 class="project title">Fundo</h3>
+                                    <h3 class="project-title">Fundo</h3>
                                     <p class="project-category">Web design</p>
                                 </a>
                             </li>
-                            <li class="project-item" data-filter-item data-category="applications">
+                            <li class="project-item active" data-filter-item data-category="applications">
                                 <a href="#">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box">
@@ -478,11 +478,11 @@
                                         </div>
                                         <img src="./assets/img/project-4.png" alt="brawlhalla" loading="lazy">
                                     </figure>
-                                    <h3 class="project title">Brawlhalla</h3>
+                                    <h3 class="project-title">Brawlhalla</h3>
                                     <p class="project-category">Applications</p>
                                 </a>
                             </li>
-                            <li class="project-item" data-filter-item data-category="web design">
+                            <li class="project-item active" data-filter-item data-category="web design">
                                 <a href="#">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box">
@@ -490,11 +490,11 @@
                                         </div>
                                         <img src="./assets/img/project-5.png" alt="dsm." loading="lazy">
                                     </figure>
-                                    <h3 class="project title">Dsm.</h3>
+                                    <h3 class="project-title">Dsm.</h3>
                                     <p class="project-category">Web design</p>
                                 </a>
                             </li>
-                            <li class="project-item" data-filter-item data-category="web design">
+                            <li class="project-item active" data-filter-item data-category="web design">
                                 <a href="#">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box">
@@ -502,11 +502,11 @@
                                         </div>
                                         <img src="./assets/img/project-6.png" alt="metaspark" loading="lazy">
                                     </figure>
-                                    <h3 class="project title">Metaspark</h3>
+                                    <h3 class="project-title">Metaspark</h3>
                                     <p class="project-category">Web design</p>
                                 </a>
                             </li>
-                            <li class="project-item" data-filter-item data-category="web development">
+                            <li class="project-item active" data-filter-item data-category="web development">
                                 <a href="#">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box">
@@ -514,11 +514,11 @@
                                         </div>
                                         <img src="./assets/img/project-7.png" alt="summary" loading="lazy">
                                     </figure>
-                                    <h3 class="project title">Summary</h3>
+                                    <h3 class="project-title">Summary</h3>
                                     <p class="project-category">Web design</p>
                                 </a>
                             </li>
-                            <li class="project-item" data-filter-item data-category="applications">
+                            <li class="project-item active" data-filter-item data-category="applications">
                                 <a href="#">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box">
@@ -526,11 +526,11 @@
                                         </div>
                                         <img src="./assets/img/project-8.jpg" alt="task manager" loading="lazy">
                                     </figure>
-                                    <h3 class="project title">Task Manager</h3>
+                                    <h3 class="project-title">Task Manager</h3>
                                     <p class="project-category">Applications</p>
                                 </a>
                             </li>
-                            <li class="project-item" data-filter-item data-category="web development">
+                            <li class="project-item active" data-filter-item data-category="web development">
                                 <a href="#">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box">
@@ -538,7 +538,7 @@
                                         </div>
                                         <img src="./assets/img/project-9.png" alt="arrival" loading="lazy">
                                     </figure>
-                                    <h3 class="project title">Arrival</h3>
+                                    <h3 class="project-title">Arrival</h3>
                                     <p class="project-category">Web development</p>
                                 </a>
                             </li>
