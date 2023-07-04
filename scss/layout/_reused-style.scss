@@ -19,16 +19,14 @@
     @include flex(center, center);
     font-size: 16px;
     color: $orange-yellow-crayola;
-}
-
-.icon-box::before{
-    @include pseudo("", absolute, $eerie-black-1, inherit);
-    inset: 1px;
-    z-index: -1;
-}
-
-.icon-box ion-icon{
-    --ionicon-stroke-width: 35px;
+    &::before{
+        @include pseudo("", absolute, $eerie-black-1, inherit);
+        inset: 1px;
+        z-index: -1;
+    }
+    & ion-icon{
+        --ionicon-stroke-width: 35px;
+    }
 }
 
 // about & service

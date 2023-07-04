@@ -11,69 +11,58 @@
 
 .sidebar-info{
     position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
-}
-
-.avatar-box{
-    background: $bg-gradient-onyx;
-    border-radius: 20px;
-}
-
-.info-content .name{
-    color: $white-2;
-    font-size: $fs-3;
-    font-weight: $fw-500;
-    letter-spacing: -0.25px;
-    margin-bottom: 10px;
-}
-
-.info-content .title{
-    color: $white-1;
-    background: $onyx;
-    font-size: $fs-8;
-    font-weight: $fw-300;
-    width: max-content;
-    padding: 3px 12px;
-    border-radius: 8px;
-}
-
-.info-more-btn{
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    border-radius: 0 15px;
-    font-size: 13px;
-    color: $orange-yellow-crayola;
-    background: $bg-gradient-onyx;
-    padding: 10px;
-    box-shadow: $shadow-2;
-    transition: $transition-1;
-    z-index: 1;
-}
-
-.info-more-btn::before{
-    content: "";
-    position: absolute;
-    inset: 1px;
-    border-radius: inherit;
-    background: $bg-gradient-jet;
-    transition: $transition-1;
-    z-index: -1;
-}
-
-.info-more-btn:hover, .info-more-btn:focus{
-    background: $bg-gradient-yellow-1;
-}
-
-.info-more-btn:hover::before, .info-more-btn:focus::before{
-    background: $bg-gradient-yellow-2;
-}
-
-.info-more-btn span{
-    display: none;
+    @include flexbox(flex-start, center, 15px);
+    & figure{
+        background: $bg-gradient-onyx;
+        border-radius: 20px;
+    }
+    & div{
+        & h1{
+            @include textStyle($white-2, $fs-3, $fw-500);
+            letter-spacing: -0.25px;
+            margin-bottom: 10px;
+        }
+        & p{
+            @include textStyle($white-1, $fs-8, $fw-300);
+            background: $onyx;
+            width: max-content;
+            padding: 3px 12px;
+            border-radius: 8px;
+        }
+    }
+    & button{
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        border-radius: 0 15px;
+        @include colorFont($orange-yellow-crayola, 13px);
+        background: $bg-gradient-onyx;
+        padding: 10px;
+        box-shadow: $shadow-2;
+        transition: $transition-1;
+        z-index: 1;
+        &::before{
+            @include pseudo("", absolute, $bg-gradient-jet, inherit);
+            inset: 1px;
+            transition: $transition-1;
+            z-index: -1;
+        }
+        &:hover{
+            background: $bg-gradient-yellow-1;
+            &::before{
+                background: $bg-gradient-yellow-2;
+            }
+        }
+        &:focus{
+            background: $bg-gradient-yellow-1;
+            &::before{
+                background: $bg-gradient-yellow-2;
+            }
+        }
+        & span{
+            display: none;
+        } 
+    }
 }
 
 .sidebar-info_more{
@@ -88,9 +77,7 @@
 }
 
 .contact-list{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
+    @include grid(1fr, 16px);
 }
 
 .contact-item{
@@ -103,67 +90,28 @@
 .contact-info{
     max-width: calc(100% - 46px);
     width: calc(100% - 46px);
-}
-
-.contact-title{
-    color: $light-gray-70;
-    font-size: $fs-8;
-    text-transform: uppercase;
-    margin-bottom: 2px;
-}
-
-.contact-info :is(.contact-link, time, address){
-    color: $white-2;
-    font-size: $fs-7;
-}
-
-.contact-info address{
-    font-style: normal;
+    & p{
+        @include colorFont($light-gray-70, $fs-8);
+        text-transform: uppercase;
+        margin-bottom: 2px;
+    }
+    & :is(a, time, address){
+        @include colorFont($white-2, $fs-7);
+    }
+    & address{
+        font-style: normal;
+    }
 }
 
 .social-list{
-    display: flex;
-    justify-content: center; //flex-start
-    align-items: center;
-    gap: 15px;
+    @include flexbox(center, center, 15px);
     padding-bottom: 4px;
-    padding-right: 26px; //left:7px
+    padding-right: 26px;
+    & li a{
+        @include colorFont($light-gray-70, 18px);
+        &:hover{
+            color: $light-gray;
+        }
+    } 
 }
-
-.social-item .social-link{
-    color: $light-gray-70;
-    font-size: 18px;
-}
-
-.social-item .social-link:hover{
-    color: $light-gray;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

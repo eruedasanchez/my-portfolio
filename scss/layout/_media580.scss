@@ -13,13 +13,11 @@
     }
 
     .article-title::after{
-        width: 40px;
-        height: 5px;
+        @include dimensions(40px, 5px);
     }
 
     .icon-box{
-        width: 48px;
-        height: 48px;
+        @include dimensions(48px, 48px);
         border-radius: 12px;
         font-size: 18px;
     }
@@ -41,39 +39,34 @@
 
     .sidebar-info{
         gap: 25px;
+        & figure{
+            border-radius: 30px;
+            & img{
+                width: 120px;
+            }
+        }
+        & div{
+            & h1{
+                margin-bottom: 15px;
+            }
+            & p{
+                padding: 5px 18px;
+            }
+        }
+        & button{
+            top: -30px;
+            right: -30px;
+            padding: 10px 15px;
+            & span{
+                display: block;
+                font-size: $fs-8;
+            }
+            & ion-icon{
+                display: none;
+            } 
+        }
     }
-
-    .avatar-box{
-        border-radius: 30px;
-    }
-
-    .avatar-box img{
-        width: 120px;
-    }
-
-    .info-content .name{
-        margin-bottom: 15px;
-    }
-
-    .info-content .title{
-        padding: 5px 18px;
-    }
-
-    .info-more-btn{
-        top: -30px;
-        right: -30px;
-        padding: 10px 15px;
-    }
-
-    .info-more-btn span{
-        display: block;
-        font-size: $fs-8;
-    }
-
-    .info-more-btn ion-icon{
-        display: none;
-    }
-
+    
     .separator{
         margin: 32px 0;
     }

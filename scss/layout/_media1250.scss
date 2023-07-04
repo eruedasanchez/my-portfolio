@@ -9,9 +9,8 @@
     }
 
     body::-webkit-scrollbar-thumb{
+        @include scrollbarStyle(hsla(0, 0%, 100%, 0.1), 20px);
         border: 3px solid $smoky-black;
-        background: hsla(0, 0%, 100%, 0.1);
-        border-radius: 20px;
         box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11), inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
     }
 
@@ -35,10 +34,7 @@
     main{
         max-width: 1200px;
         margin-inline: auto;
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        gap: 25px;
+        @include flexbox(center, stretch, 25px);
     }
 
     .main-content{
@@ -60,25 +56,23 @@
 
     .sidebar-info{
         flex-direction: column;
+        & figure img {
+            width: 150px;
+        }
+        & div{
+            & h1{
+                white-space: nowrap;
+                text-align: center;
+            }
+            & p{
+                margin: auto;
+            }
+        }
+        & button{
+            display: none;
+        }
     }
-
-    .avatar-box img{
-        width: 150px;
-    }
-
-    .info-content .name{
-        white-space: nowrap;
-        text-align: center;
-    }
-
-    .info-content .title{
-        margin: auto;
-    }
-
-    .info-more-btn{
-        display: none;
-    }
-
+    
     .sidebar-info_more{
         opacity: 1;
         visibility: visible;
@@ -88,13 +82,13 @@
         grid-template-columns: 1fr;
     }
 
-    .contact-info :is(.contact-link){
+    .contact-info :is(a){
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    .contact-info :is(.contact-link, time, address){
+    .contact-info :is(a, time, address){
         font-size: 14px;
         font-weight: $fw-300;
     }
@@ -108,9 +102,4 @@
     .timeline-text{
         max-width: 700px;
     }
-
-
-
-
-
 }

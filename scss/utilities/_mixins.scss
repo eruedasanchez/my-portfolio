@@ -4,7 +4,6 @@
     box-sizing: $bsizing;
 }
 
-
 @mixin dimensions($width, $height){
     width: $width;
     height: $height;
@@ -14,19 +13,6 @@
     background: $bg;
     border-radius: $bradius;
 }
-
-
-// margin: 15px 12px;
-//     margin-bottom: 75px;
-//     min-width: 259px;
-
-
-// background: $eerie-black-2;
-//     border: 1px solid $jet;
-//     border-radius: 20px;
-//     padding: 15px;
-//     box-shadow: $shadow-1;
-//     z-index: 1;
 
 @mixin relative($bg, $bradius, $bshadow, $zidx){
     position: relative;
@@ -41,9 +27,58 @@
     align-items: $aitems;
 }
 
+@mixin flexbox($jcontent, $aitems, $gap){
+    display: flex;
+    justify-content: $jcontent;
+    align-items: $aitems;
+    gap: $gap;
+}
+
+@mixin grid($gtcol, $gap){
+    display: grid;
+    grid-template-columns: $gtcol;
+    gap: $gap;
+}
+
 @mixin pseudo($content, $position, $bg, $bradius){
     content: $content;
     position: $position;
     background: $bg;
     border-radius: $bradius;
 }
+
+// background: $eerie-black-2;
+//     border: 1px solid $jet;
+//     border-radius: 20px;
+//     padding: 15px;
+//     box-shadow: $shadow-1;
+//     z-index: 1;
+
+
+@mixin textStyle($color, $fsize, $fweight){
+    color: $color;
+    font-size: $fsize;
+    font-weight: $fweight;
+}
+
+@mixin colorFont($color, $fsize){
+    color: $color;
+    font-size: $fsize;
+}
+
+
+
+// .info-more-btn{
+//     position: absolute;
+//     top: -15px;
+//     right: -15px;
+//     border-radius: 0 15px;
+//     font-size: 13px;
+ //    color: $orange-yellow-crayola;
+//     background: $bg-gradient-onyx;
+//     padding: 10px;
+//     box-shadow: $shadow-2;
+//     transition: $transition-1;
+//     z-index: 1;
+// }
+
