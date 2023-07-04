@@ -285,22 +285,22 @@ main {
   border-radius: 12px 12px 0 0;
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
   z-index: 5; }
-
-.navbar-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px; }
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 10px; }
 
 .navbar-link {
   color: #d6d6d6;
   font-size: 11px;
   padding: 20px 7px;
   transition: color 0.25s ease; }
-
-.navbar-link:hover, .navbar-link:focus {
-  color: rgba(214, 214, 214, 0.7); }
+  .navbar-link:hover {
+    color: rgba(214, 214, 214, 0.7); }
+  .navbar-link:focus {
+    color: rgba(214, 214, 214, 0.7); }
 
 .navbar-link.active {
   color: #ffdb70; }
@@ -1011,8 +1011,8 @@ textarea.form-input::-webkit-resizer {
   /* navbar */
   .navbar {
     border-radius: 20px 20px 0 0; }
-  .navbar-list {
-    gap: 20px; }
+    .navbar ul {
+      gap: 20px; }
   .navbar-link {
     font-size: 14px; }
   /* about & service */
@@ -1191,9 +1191,9 @@ textarea.form-input::-webkit-resizer {
     border-radius: 0 20px;
     padding: 0 20px;
     box-shadow: none; }
-  .navbar-list {
-    gap: 30px;
-    padding: 0 20px; }
+    .navbar ul {
+      gap: 30px;
+      padding: 0 20px; }
   .navbar-link {
     font-weight: 500; }
   /* about & service */

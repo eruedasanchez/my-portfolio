@@ -26,13 +26,12 @@
         border-radius: 0 20px;
         padding: 0 20px;
         box-shadow: none;
+        & ul{
+            gap: 30px;
+            padding: 0 20px;
+        }
     }
-
-    .navbar-list{
-        gap: 30px;
-        padding: 0 20px;
-    }
-
+    
     .navbar-link{
         font-weight: $fw-500;
     }
