@@ -103,10 +103,11 @@ article.active{
     padding-top: 45px;
     border-radius: 14px;
     cursor: pointer;
+    &::before{
+        inset: 1px;
+        @include pseudo("", absolute, $bg-gradient-jet, inherit);
+        z-index: -1;
+    }
 }
 
-.content-card::before{
-    inset: 1px;
-    @include pseudo("", absolute, $bg-gradient-jet, inherit);
-    z-index: -1;
-}
+

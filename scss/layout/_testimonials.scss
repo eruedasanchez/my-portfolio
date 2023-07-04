@@ -7,10 +7,7 @@
 }
 
 .testimonials-list{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 15px;
+    @include flexbox(flex-start, flex-start, 15px);
     margin: 0 -15px;
     padding: 25px 15px;
     padding-bottom: 35px;
@@ -18,35 +15,30 @@
     scroll-behavior: smooth;
     overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
-}
+    & li{
+        min-width: 100%;
+        scroll-snap-align: center;
+        & div figure{
+            @include absolute($bg-gradient-onyx, 14px, $shadow-1);
+            top: 0;
+            left: 0;
+            transform: translate(15px, -25px);
+        }
+        & div div{
+            @include textStyle($light-gray, $fs-6, $fw-300);
+            line-height: 1.6;
+            display: -webkit-box;
+            line-clamp: 4;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
 
-.testimonials-item{
-    min-width: 100%;
-    scroll-snap-align: center;
-}
-
-.testimonials-avatar-box{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(15px, -25px);
-    background: $bg-gradient-onyx;
-    border-radius: 14px;
-    box-shadow: $shadow-1;
+        }
+    }
 }
 
 .testimonials-item-title{
     margin-bottom: 7px;
 }
 
-.testimonials-text{
-    color: $light-gray;
-    font-size: $fs-6;
-    font-weight: $fw-300;
-    line-height: 1.6;
-    display: -webkit-box;
-    line-clamp: 4;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
+

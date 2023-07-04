@@ -66,6 +66,12 @@
     font-size: $fsize;
 }
 
+@mixin absolute($bg, $bradius, $bshadow){
+    position: absolute;
+    background: $bg;
+    border-radius: $bradius;
+    box-shadow: $bshadow;
+}
 
 
 // .info-more-btn{
@@ -81,6 +87,14 @@
 //     transition: $transition-1;
 //     z-index: 1;
 // }
+
+// position: absolute;
+//             top: 0;
+//             left: 0;
+//             transform: translate(15px, -25px);
+//             background: $bg-gradient-onyx;
+//             border-radius: 14px;
+//             box-shadow: $shadow-1;
 
 // .navbar{
 //     position: fixed;
