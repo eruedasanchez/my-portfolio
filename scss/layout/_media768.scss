@@ -1,0 +1,80 @@
+@media (min-width: 768px){
+    /* reused style */
+
+    .sidebar, article{
+        width: 700px;
+    }
+
+    .has-scrollbar::--webkit-scrollbar-button{
+        width: 100%;
+    }
+
+    /* sidebar */
+    .contact-list{
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 15px;
+    }
+
+    /* navbar */
+    .navbar-link{
+        font-size: 15px;
+    }
+
+    /* testimonials modal */
+    .testimonials-modal{
+        gap: 35px;
+        max-width: 680px;
+    }
+
+    .modal-avatar-box img{
+        width: 80px;
+    }
+
+    /* portfolio */
+    .article-title{
+        padding-bottom: 20px;
+    }
+
+    .filter-select-box{
+        display: none;
+    }
+
+    .filter-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        padding-left: 5px;
+        margin-bottom: 30px;
+    }
+
+    .filter-item button{
+        color: $light-gray;
+        font-size: $fs-5;
+        transition: $transition-1
+    }
+
+    .filter-item button:hover{
+        color: $light-gray-70;
+    }
+
+    .filter-item button.active{
+        color: $orange-yellow-crayola;
+    }
+
+    .project-list, .blog-posts-list{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* contact */
+    .input-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-btn{
+        width: max-content;
+        margin-left: auto;
+    }
+
+
+}
