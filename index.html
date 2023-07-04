@@ -14,7 +14,7 @@
     </head>
     <body>
         <main>
-            <!-- Inicio sidebar -->
+            <!-- Start sidebar -->
             <aside id="data-sidebar" class="sidebar">
                 <div class="sidebar-info">
                     <figure class="avatar-box">
@@ -72,28 +72,27 @@
                     <div class="separator"></div>
                     <ul class="social-list">
                         <li class="social-item">
-                            <a href="" class="social-link">
-                                <ion-icon name="logo-twitter"></ion-icon>
-                            </a>
-                        </li>
-                        <li class="social-item">
-                            <a href="" class="social-link">
+                            <a href="https://github.com/eruedasanchez" target="_blank" class="social-link">
                                 <ion-icon name="logo-github"></ion-icon>
                             </a>
                         </li>
                         <li class="social-item">
-                            <a href="" class="social-link">
+                            <a href="https://www.linkedin.com/in/e-ruedasanchez/" target="_blank" class="social-link">
                                 <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="https://twitter.com/RSanchez_Eze" target="_blank" class="social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
                             </a>
                         </li>
                     </ul>
                 </div>
             </aside>
-            <!-- Fin sidebar -->
-
-            <!-- Inicio main-content -->
+            <!-- End sidebar -->
+            
             <div class="main-content">
-                <!-- Inicio navbar -->
+                <!-- Start navbar -->
                 <nav class="navbar">
                     <ul class="navbar-list">
                         <li class="navbar-item">
@@ -113,16 +112,16 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- Fin navbar -->
+                <!-- End navbar -->
 
-                <article class="about active" data-page="about">
-                    <!-- Inicio about & service -->
+                <!-- Start about & service -->
+                <article class="about" data-page="about">
                     <header>
                         <h2 class="h2 article-title">About me</h2>
                     </header>
                     <section class="about-text">
-                        <p>I'm Creative Director and UI/UX Designer from Buenos Aires, Argentina, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
-                        <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
+                        <p>I'm Fullstack Developer and Computer Science student from Buenos Aires, Argentina. I work in web development and implement algorithms. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                        <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way.</p>
                     </section>
                     <section class="service">
                         <h3 class="h3 service-title">What I'm doing</h3>
@@ -167,12 +166,12 @@
                     </section>
                     <!-- Fin about & service -->
 
-                    <!-- Inicio testimonials -->
+                    <!-- Start testimonials -->
                     <section class="testimonials">
                         <h3 class="h3 testimonials-title">Testimonials</h3>
                         <ul class="testimonials-list has-scrollbar">
                             <li class="testimonials-item">
-                                <div class="content-card">
+                                <div class="content-card" data-testimonials-item>
                                     <figure class="testimonials-avatar-box">
                                         <img src="./assets/img/avatar-1.png" alt="Daniel Lewis" width="60" data-testimonials-avatar>
                                     </figure>
@@ -183,7 +182,7 @@
                                 </div>
                             </li>
                             <li class="testimonials-item">
-                                <div class="content-card">
+                                <div class="content-card" data-testimonials-item>
                                     <figure class="testimonials-avatar-box">
                                         <img src="./assets/img/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
                                     </figure>
@@ -194,7 +193,7 @@
                                 </div>
                             </li>
                             <li class="testimonials-item">
-                                <div class="content-card">
+                                <div class="content-card" data-testimonials-item>
                                     <figure class="testimonials-avatar-box">
                                         <img src="./assets/img/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
                                     </figure>
@@ -205,7 +204,7 @@
                                 </div>
                             </li>
                             <li class="testimonials-item">
-                                <div class="content-card">
+                                <div class="content-card" data-testimonials-item>
                                     <figure class="testimonials-avatar-box">
                                         <img src="./assets/img/avatar-4.png" alt="Henry William" width="60" data-testimonials-avatar>
                                     </figure>
@@ -217,36 +216,36 @@
                             </li>
                         </ul>
                     </section>
-                    <!-- Fin testimonials -->
+                    <!-- End testimonials -->
 
-                    <!-- Inicio testimonials modal -->
-                    <div id="data-modal-container" class="modal-container">
-                        <div id="data-overlay" class="overlay"></div>
+                    <!-- Start testimonials modal -->
+                    <div class="modal-container" data-modal-container>
+                        <div class="overlay" data-overlay></div>
                         <section class="testimonials-modal">
-                            <button id="data-modal-close-btn" class="modal-close-btn">
+                            <button class="modal-close-btn" data-modal-close-btn>
                                 <ion-icon name="close-outline"></ion-icon>
                             </button>
                             <div class="modal-img-wrapper">
                                 <figure class="modal-avatar-box">
-                                    <img id="data-modal-img" src="./assets/img/avatar-1.png" alt="Daniel Lewis" width="80">
+                                    <img src="./assets/img/avatar-1.png" alt="Daniel Lewis" width="80" data-modal-img>
                                 </figure>
                                 <img src="./assets/img/icon-quote.svg" alt="quote icon">
                             </div>
                             <div class="modal-content">
-                                <h4 id="data-modal-title" class="h3 modal-title">Daniel Lewis</h4>
+                                <h4 class="h3 modal-title" data-modal-title>Daniel Lewis</h4>
                                 <time datetime="2023-06-14">14 June, 2023</time>
-                                <div id="data-modal-text">
+                                <div data-modal-text>
                                     <p>Ezequiel was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt consectetur adipiscing elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.</p>
                                 </div>
                             </div>
                         </section>
                     </div>
-                    <!-- Fin testimonials modal -->
+                    <!-- End testimonials modal -->
 
-                    <!-- Inicio clients -->
+                    <!-- Start clients -->
                     <section class="clients">
                         <h3 class="h3 clients-title">Clients</h3>
-                        <ul class="client-list has-scrollbar">
+                        <ul class="clients-list has-scrollbar">
                             <li class="clients-item">
                                 <a href="#">
                                     <img src="./assets/img/logo-1-color.png" alt="client logo">
@@ -279,10 +278,11 @@
                             </li>
                         </ul>
                     </section>
-                    <!-- Fin clients -->
+                    <!-- End clients -->
                 </article>
+                <!-- End about & service -->
 
-                <!-- Inicio resume -->
+                <!-- Start resume -->
                 <article class="resume" data-page="resume">
                     <header>
                         <h2 class="h2 article-title">Resume</h2>
@@ -296,18 +296,18 @@
                         </div>
                         <ol class="timeline-list">
                             <li class="timeline-item">
-                                <h4 class="h4 timeline-item-title">University school of the arts</h4>
-                                <span>2017-2018</span>
+                                <h4 class="h4 timeline-item-title">University of Buenos Aires</h4>
+                                <span>2017-2025</span>
                                 <p class="timeline-text">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
                             </li>
                             <li class="timeline-item">
-                                <h4 class="h4 timeline-item-title">University school of the arts</h4>
-                                <span>2017-2018</span>
+                                <h4 class="h4 timeline-item-title">Coderhouse<x/h4>
+                                <span>2023-2024</span>
                                 <p class="timeline-text">Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis..</p>
                             </li>
                             <li class="timeline-item">
-                                <h4 class="h4 timeline-item-title">High school of art and design</h4>
-                                <span>2017-2018</span>
+                                <h4 class="h4 timeline-item-title">National Technological University (UTN)</h4>
+                                <span>2016-2017</span>
                                 <p class="timeline-text">Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos.</p>
                             </li>
                         </ol>
@@ -321,38 +321,39 @@
                         </div>
                         <ol class="timeline-list">
                             <li class="timeline-item">
-                                <h4 class="h4 timeline-item-title">Creative director</h4>
+                                <h4 class="h4 timeline-item-title">Web Developer</h4>
                                 <span>2017-2018</span>
                                 <p class="timeline-text">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
                             </li>
                             <li class="timeline-item">
-                                <h4 class="h4 timeline-item-title">Art director</h4>
+                                <h4 class="h4 timeline-item-title">Web Designer</h4>
                                 <span>2017-2018</span>
                                 <p class="timeline-text">Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis..</p>
                             </li>
                             <li class="timeline-item">
-                                <h4 class="h4 timeline-item-title">Web designer</h4>
+                                <h4 class="h4 timeline-item-title">Math Teach assistant</h4>
                                 <span>2017-2018</span>
                                 <p class="timeline-text">Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos.</p>
                             </li>
                         </ol>
                     </section>
 
+                    <!-- Start skills -->
                     <section class="skill">
                         <h3 class="h3 skills-title">My skills</h3>
                         <ul class="skills-list content-card">
                             <li class="skills-item">
                                 <div class="title-wrapper">
-                                    <h5 class="h5">Web design</h5>
+                                    <h5 class="h5">HTML 5</h5>
                                     <data value="80">80%</data>
                                 </div>
                                 <div class="skill-progress-bg">
-                                    <div class="skill-progress-fill" style="width: 80;"></div>
+                                    <div class="skill-progress-fill" style="width: 40%;"></div>
                                 </div>
                             </li>
                             <li class="skills-item">
                                 <div class="title-wrapper">
-                                    <h5 class="h5">Graphic design</h5>
+                                    <h5 class="h5">CSS 3</h5>
                                     <data value="70">70%</data>
                                 </div>
                                 <div class="skill-progress-bg">
@@ -361,7 +362,7 @@
                             </li>
                             <li class="skills-item">
                                 <div class="title-wrapper">
-                                    <h5 class="h5">Graphic design</h5>
+                                    <h5 class="h5">C / C++</h5>
                                     <data value="70">70%</data>
                                 </div>
                                 <div class="skill-progress-bg">
@@ -370,8 +371,8 @@
                             </li>
                             <li class="skills-item">
                                 <div class="title-wrapper">
-                                    <h5 class="h5">Branding</h5>
-                                    <data value="90">90%</data>
+                                    <h5 class="h5">JS</h5>
+                                    <data value="75">75%</data>
                                 </div>
                                 <div class="skill-progress-bg">
                                     <div class="skill-progress-fill" style="width: 90%;"></div>
@@ -379,7 +380,7 @@
                             </li>
                             <li class="skills-item">
                                 <div class="title-wrapper">
-                                    <h5 class="h5">WordPress</h5>
+                                    <h5 class="h5">Python</h5>
                                     <data value="50">50%</data>
                                 </div>
                                 <div class="skill-progress-bg">
@@ -388,10 +389,11 @@
                             </li>
                         </ul>
                     </section>
-                </article>
+                    <!-- Start skills -->
+                </article> 
                 <!-- Fin resume -->
 
-                <!-- Inicio portfolio -->
+                <!-- Start portfolio -->
                 <article class="portfolio" data-page="portfolio">
                     <header>
                         <h2 class="h2 article-title">Portfolio</h2>
@@ -434,7 +436,7 @@
                             </ul>
                         </div>
                         <ul class="project-list">
-                            <li class="project-item" data-filter-item data-category="web development">
+                            <li class="project-item active" data-filter-item data-category="web development">
                                 <a href="#">
                                     <figure class="project-img">
                                         <div class="project-item-icon-box">
@@ -544,10 +546,10 @@
                             </li>
                         </ul>
                     </section>
-                </article>
-                <!-- Fin portfolio -->
+                </article> 
+                <!-- End portfolio -->
 
-                <!-- Inicio blog -->
+                <!-- Start blog -->
                 <article class="blog" data-page="blog">
                     <header>
                         <h2 class="h2 article-title">Blog</h2>
@@ -652,15 +654,15 @@
                             </li>
                         </ul>
                     </section>
-                </article>
-                <!-- Fin blog -->
+                </article> 
+                <!-- End blog -->
 
-                <!-- Inicio contact -->
-                <article class="contact" data-page="contact">
+                <!-- Start contact -->
+                <article class="contact active" data-page="contact">
                     <header>
                         <h2 class="h2 article-title">Contact</h2>
                     </header>
-                    <section class="mapbox">
+                    <section class="mapbox" data-mapbox>
                         <figure>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.819650892485!2d-58.40875946022556!3d-34.58342967307416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5b874903f87%3A0x1e6c18a477e64f1e!2sParque%20Las%20Heras!5e0!3m2!1ses-419!2sar!4v1688341168677!5m2!1ses-419!2sar" width="400" height="300" loading="lazy"></iframe>
                         </figure>
@@ -679,9 +681,8 @@
                             </button>
                         </form>
                     </section>
-                </article>
-                <!-- Fin contact -->
-
+                </article> 
+                <!-- End contact -->
             </div>
         </main>
         

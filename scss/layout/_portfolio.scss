@@ -113,12 +113,12 @@
 }
 
 .project-item-icon-box{
-    background: $jet;
+    background: $jet; 
     color: $orange-yellow-crayola;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
+    top: 35%; 
+    left: 43%; 
+    transform: translate(-40%, -40%) scale(0.8);
     font-size: 20px;
     padding: 18px;
     border-radius: 12px;
@@ -164,13 +164,4 @@
     font-size: $fs-6;
     font-weight: $fw-300;
 }
-
-
-
-
-
-
-
-
-
 

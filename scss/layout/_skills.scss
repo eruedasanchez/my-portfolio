@@ -7,7 +7,7 @@
 }
 
 .skills-item:not(:last-child){
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .skill .title-wrapper{
@@ -18,13 +18,13 @@
 }
 
 .skill .title-wrapper data{
-    color: $light-gray;
+    color: $light-gray; 
     font-size: $fs-7;
     font-weight: $fw-300;
 }
 
 .skill-progress-bg{
-    background: $jet;
+    background: $jet; 
     width: 100%;
     height: 8px;
     border-radius: 10px;

@@ -38,6 +38,11 @@ input, textarea {
 body {
   background: #121212; }
 
+main {
+  margin: 15px 12px;
+  margin-bottom: 75px;
+  min-width: 259px; }
+
 html {
   font-family: "Poppins", sans-serif; }
 
@@ -113,6 +118,16 @@ article.active {
 .article-title {
   position: relative;
   padding-bottom: 7px; }
+
+.article-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: #ffdb70;
+  border-radius: 3px; }
 
 .has-scrollbar::-webkit-scrollbar {
   width: 6px;
@@ -331,7 +346,7 @@ main {
   padding: 20px;
   border-radius: 14px;
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
-  z-index: 2; }
+  z-index: 1; }
 
 .service-item::before {
   content: "";
@@ -511,7 +526,7 @@ main {
 .clients {
   margin-bottom: 15px; }
 
-.client-list {
+.clients-list {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -601,7 +616,7 @@ main {
   padding: 20px; }
 
 .skills-item:not(:last-child) {
-  margin-bottom: 15px; }
+  margin-bottom: 18px; }
 
 .skill .title-wrapper {
   display: flex;
@@ -729,9 +744,9 @@ main {
   background: #383838;
   color: #ffdb70;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
+  top: 35%;
+  left: 43%;
+  transform: translate(-40%, -40%) scale(0.8);
   font-size: 20px;
   padding: 18px;
   border-radius: 12px;
