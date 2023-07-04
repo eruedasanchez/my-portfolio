@@ -1,4 +1,49 @@
+@mixin reset($margin, $padding, $bsizing){
+    margin: $margin;
+    padding: $padding;
+    box-sizing: $bsizing;
+}
+
+
 @mixin dimensions($width, $height){
     width: $width;
     height: $height;
+}
+
+@mixin scrollbarStyle($bg, $bradius){
+    background: $bg;
+    border-radius: $bradius;
+}
+
+
+// margin: 15px 12px;
+//     margin-bottom: 75px;
+//     min-width: 259px;
+
+
+// background: $eerie-black-2;
+//     border: 1px solid $jet;
+//     border-radius: 20px;
+//     padding: 15px;
+//     box-shadow: $shadow-1;
+//     z-index: 1;
+
+@mixin relative($bg, $bradius, $bshadow, $zidx){
+    position: relative;
+    background: $bg;
+    box-shadow: $bshadow;
+    z-index: $zidx;
+}
+
+@mixin flex($jcontent, $aitems){
+    display: flex;
+    justify-content: $jcontent;
+    align-items: $aitems;
+}
+
+@mixin pseudo($content, $position, $bg, $bradius){
+    content: $content;
+    position: $position;
+    background: $bg;
+    border-radius: $bradius;
 }

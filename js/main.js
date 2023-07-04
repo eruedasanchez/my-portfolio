@@ -38,3 +38,30 @@ const loadBlogList = (array) => {
 }
 
 loadBlogList(blogs);
+
+const menuSection = document.querySelector('#menu-section');
+const sections = document.querySelectorAll('#menu-section article');
+
+menuSection.addEventListener('click', (event) => {
+    const id = event.target.dataset.id;
+    console.log(id);
+
+    if(id){
+        sections.forEach((section) => {
+            section.classList.remove('active');
+
+        });
+        const selectedSection = document.getElementById(id);
+        console.log(selectedSection);
+        selectedSection.classList.add('active');
+    }
+
+})
+
+
+
+
+
+
+
+

@@ -14,25 +14,16 @@
 }
 
 .icon-box{
-    position: relative;
-    background: $bg-gradient-onyx;
+    @include relative($bg-gradient-onyx, 8px, $shadow-1, 1);
     @include dimensions(30px, 30px);
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center);
     font-size: 16px;
     color: $orange-yellow-crayola;
-    box-shadow: $shadow-1;
-    z-index: 1;
 }
 
 .icon-box::before{
-    content: "";
-    position: absolute;
+    @include pseudo("", absolute, $eerie-black-1, inherit);
     inset: 1px;
-    background: $eerie-black-1;
-    border-radius: inherit;
     z-index: -1;
 }
 
@@ -84,14 +75,10 @@ article.active{
 }
 
 .article-title::after{
-    content: "";
-    position: absolute;
+    @include pseudo("", absolute, $orange-yellow-crayola, 3px);
     bottom: 0;
     left: 0;
-    width: 30px;
-    height: 3px;
-    background: $orange-yellow-crayola;
-    border-radius: 3px;
+    @include dimensions(30px, 3px);
 }
 
 // testimonials
@@ -101,13 +88,11 @@ article.active{
 }
 
 .has-scrollbar::-webkit-scrollbar-track{
-    background: $onyx;
-    border-radius: 5px;
+    @include scrollbarStyle($onyx, 5px);
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb{
-    background: $orange-yellow-crayola;
-    border-radius: 5px;
+    @include scrollbarStyle($orange-yellow-crayola, 5px);
 }
 
 .has-scrollbar::-webkit-scrollbar-button{
@@ -115,21 +100,15 @@ article.active{
 }
 
 .content-card{
-    position: relative;
-    background: $bg-gradient-onyx;
+    @include relative($bg-gradient-onyx, 14px, $shadow-2, 1);
     padding: 15px;
     padding-top: 45px;
     border-radius: 14px;
-    box-shadow: $shadow-2;
-    z-index: 1;
     cursor: pointer;
 }
 
 .content-card::before{
-    content: "";
-    position: absolute;
     inset: 1px;
-    background: $bg-gradient-jet;
-    border-radius: inherit;
+    @include pseudo("", absolute, $bg-gradient-jet, inherit);
     z-index: -1;
 }
