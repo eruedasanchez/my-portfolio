@@ -3,14 +3,11 @@
 } 
 
 .about-text{
-    color: $light-gray;
-    font-size: $fs-6;
-    font-weight: $fw-300;
+    @include textStyle($light-gray, $fs-6, $fw-300);
     line-height: 1.6;
-}
-
-.about-text p{
-    margin-bottom: 15px;
+    & p{
+        margin-bottom: 15px;
+    }
 }
 
 .service{
@@ -22,49 +19,33 @@
 }
 
 .service-list{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.service-item{
-    position: relative;
-    background: $bg-gradient-onyx;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: $shadow-2;
-    z-index: 1;
-}
-
-.service-item::before{
-    content: "";
-    position: absolute;
-    inset: 1px;
-    background: $bg-gradient-jet;
-    border-radius: inherit;
-    z-index: -1;
-}
-
-.service-icon-box{
-    margin-bottom: 10px;
-}
-
-.service-icon-box img{
-    margin: auto;
-}
-
-.service-content-box{
-    text-align: center;
+    @include grid(1fr, 20px);
+    & li{
+        @include relative($bg-gradient-onyx, 14px, $shadow-2, 1);
+        padding: 20px;
+        &::before{
+            @include pseudo("", absolute, $bg-gradient-jet, inherit);
+            inset: 1px;
+            z-index: -1;
+        }
+        & div:first-child{
+            margin-bottom: 10px;
+            & img{
+                margin: auto;
+            }
+        }
+        & div:last-child{
+            text-align: center;
+            & p{
+                @include textStyle($light-gray, $fs-6, $fw-300);
+                line-height: 1.5;
+            }
+        }
+    }
 }
 
 .service-item-title{
     margin-bottom: 7px;
 }
 
-.service-item-text{
-    color: $light-gray;
-    font-size: $fs-6;
-    font-weight: $fw-300;
-    line-height: 1.5;
-}
 

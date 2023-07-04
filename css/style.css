@@ -313,9 +313,8 @@ main {
   font-size: 14px;
   font-weight: 300;
   line-height: 1.6; }
-
-.about-text p {
-  margin-bottom: 15px; }
+  .about-text p {
+    margin-bottom: 15px; }
 
 .service {
   margin-bottom: 35px; }
@@ -327,40 +326,33 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px; }
-
-.service-item {
-  position: relative;
-  background: linear-gradient(to bottom right, #404040 0%, rgba(64, 64, 64, 0) 50%);
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
-  z-index: 1; }
-
-.service-item::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: linear-gradient(to bottom right, rgba(45, 45, 46, 0.251) 0%, rgba(27, 27, 29, 0), 100%), #202022;
-  border-radius: inherit;
-  z-index: -1; }
-
-.service-icon-box {
-  margin-bottom: 10px; }
-
-.service-icon-box img {
-  margin: auto; }
-
-.service-content-box {
-  text-align: center; }
+  .service-list li {
+    position: relative;
+    background: linear-gradient(to bottom right, #404040 0%, rgba(64, 64, 64, 0) 50%);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    padding: 20px; }
+    .service-list li::before {
+      content: "";
+      position: absolute;
+      background: linear-gradient(to bottom right, rgba(45, 45, 46, 0.251) 0%, rgba(27, 27, 29, 0), 100%), #202022;
+      border-radius: inherit;
+      inset: 1px;
+      z-index: -1; }
+    .service-list li div:first-child {
+      margin-bottom: 10px; }
+      .service-list li div:first-child img {
+        margin: auto; }
+    .service-list li div:last-child {
+      text-align: center; }
+      .service-list li div:last-child p {
+        color: #d6d6d6;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5; }
 
 .service-item-title {
   margin-bottom: 7px; }
-
-.service-item-text {
-  color: #d6d6d6;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.5; }
 
 .testimonials {
   margin-bottom: 30px; }
@@ -1020,17 +1012,17 @@ textarea.form-input::-webkit-resizer {
     margin-bottom: 20px; }
   .about-text {
     margin-bottom: 40px; }
-  .service-item {
+  .service-list li {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 18px;
     padding: 30px; }
-  .service-icon-box {
-    margin-bottom: 0;
-    margin-top: 5px; }
-  .service-content-box {
-    text-align: left; }
+    .service-list li div:first-child {
+      margin-bottom: 0;
+      margin-top: 5px; }
+    .service-list li div:last-child {
+      text-align: left; }
   /* testimonials */
   .testimonials-title {
     margin-bottom: 25px; }
