@@ -1179,3 +1179,47 @@ textarea.form-input::-webkit-resizer {
   .form-btn {
     width: max-content;
     margin-left: auto; } }
+
+@media (min-width: 1024px) {
+  /* reused style */
+  .sidebar, article {
+    width: 950px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25); }
+  main {
+    margin-bottom: 60px; }
+  .main-content {
+    position: relative;
+    width: max-content;
+    margin: auto; }
+  /* navbar */
+  .navbar {
+    position: absolute;
+    bottom: auto;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: max-content;
+    border-radius: 0 20px;
+    padding: 0 20px;
+    box-shadow: none; }
+  .navbar-list {
+    gap: 30px;
+    padding: 0 20px; }
+  .navbar-link {
+    font-weight: 500; }
+  /* about & service */
+  .service-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 25px; }
+  /* testimonials */
+  .testimonials-item {
+    min-width: calc(50% -  15px); }
+  /* clients */
+  .clients-item {
+    min-width: calc(25% - 38px); }
+  /* portfolio */
+  .project-list {
+    grid-template-columns: repeat(3, 1fr); }
+  /* blog */
+  .blog-banner-box {
+    height: 230px; } }
