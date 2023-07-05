@@ -58,8 +58,10 @@
     }
 
     /* blog */
-    .blog-banner-box{
-        height: 230px;
+    .blog-posts ul{
+        grid-template-columns: repeat(2, 1fr);
+        & li > a figure{
+            height: 230px;
+        }
     }
-
 }

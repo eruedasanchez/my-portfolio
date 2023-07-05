@@ -211,11 +211,11 @@
     }
 
     /* portfolio. blog */
-    .project-img, .blog-banner-box{
+    .project-img, .blog-posts ul li > a figure{
         border-radius: 16px;
     }
 
-    .blog-posts-list{
+    .blog-posts ul{
         gap: 30px;
     }
 
@@ -249,13 +249,5 @@
             font-size: 18px;
         }
     }
-
-
-
-
-
-
-
-
-
 }
+
