@@ -4,34 +4,29 @@
 
 .skills-list{
     padding: 20px;
+    & li{
+        &:not(:last-child){
+            margin-bottom: 18px;
+        }
+        & div:first-child{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 8px;
+            & data{
+                @include textStyle($light-gray, $fs-7, $fw-300);
+            }
+        }
+        & div:last-child{
+            background: $jet;
+            @include dimensions(100%, 8px); 
+            border-radius: 10px;
+            & div{
+                background: $bg-gradient-yellow;
+                height: 100%;
+                border-radius: inherit;
+            }
+        }
+    }
 }
 
-.skills-item:not(:last-child){
-    margin-bottom: 18px;
-}
-
-.skill .title-wrapper{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-bottom: 8px;
-}
-
-.skill .title-wrapper data{
-    color: $light-gray; 
-    font-size: $fs-7;
-    font-weight: $fw-300;
-}
-
-.skill-progress-bg{
-    background: $jet; 
-    width: 100%;
-    height: 8px;
-    border-radius: 10px;
-}
-
-.skill-progress-fill{
-    background: $bg-gradient-yellow;
-    height: 100%;
-    border-radius: inherit;
-}

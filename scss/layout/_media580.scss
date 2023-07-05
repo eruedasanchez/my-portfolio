@@ -194,20 +194,19 @@
     /* resume */
     .timeline-list{
         margin-left: 65px;
+        & li{
+            &:not(:last-child)::before{
+                left: -40px;
+            }
+            &::after{
+                @include dimensions(8px,8px);
+                left: -43px;
+            }
+        }
     }
-
-    .timeline-item:not(:last-child)::before{
-        left: -40px;
-    }
-
-    .timeline-item::after{
-        height: 8px;
-        width: 8px;
-        left: -43px;
-    }
-
+    
     /* skills */
-    .skills-item:not(:last-child){
+    .skills-list li:not(:last-child){
         margin-bottom: 25px;
     }
 

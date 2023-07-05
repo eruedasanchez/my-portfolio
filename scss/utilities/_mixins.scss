@@ -99,6 +99,13 @@
     box-shadow: $bshadow;
 }
 
+@mixin timelineText($color, $fweight, $lheight){
+    color: $color;
+    font-weight: $fweight;
+    line-height: $lheight;
+
+}
+
 
 // .info-more-btn{
 //     position: absolute;
