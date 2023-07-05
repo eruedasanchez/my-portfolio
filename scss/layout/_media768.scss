@@ -39,28 +39,24 @@
     }
 
     .filter-list{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
+        @include flexbox(center, center, 25px);
         padding-left: 5px;
         margin-bottom: 30px;
+        & li{
+            // filter-item
+            & button{
+                @include colorFont($light-gray, $fs-5);
+                transition: $transition-1;
+                &:hover{
+                    color: $light-gray-70;
+                }
+                &.active{
+                    color: $orange-yellow-crayola;
+                }
+            }
+        }
     }
-
-    .filter-item button{
-        color: $light-gray;
-        font-size: $fs-5;
-        transition: $transition-1
-    }
-
-    .filter-item button:hover{
-        color: $light-gray-70;
-    }
-
-    .filter-item button.active{
-        color: $orange-yellow-crayola;
-    }
-
+    
     .project-list, .blog-posts-list{
         grid-template-columns: 1fr 1fr;
     }
