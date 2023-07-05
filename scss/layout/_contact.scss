@@ -1,22 +1,18 @@
 .mapbox{
     position: relative;
-    height: 250px;
-    width: 100%;
+    @include dimensions(100%, 250px);
     border-radius: 16px;
     margin-bottom: 30px;
     border: 1px solid $jet;
     overflow: hidden;
-}
-
-.mapbox figure{
-    height: 100%;
-}
-
-.mapbox iframe{
-    width: 100%;
-    height: 100%;
-    border: none;
-    filter: grayscale(1) invert(1);
+    & figure{
+        height: 100%;
+        & iframe{
+            @include dimensions(100%, 100%);
+            border: none;
+            filter: grayscale(1) invert(1);
+        }
+    }    
 }
 
 .contact-form{
@@ -28,28 +24,25 @@
 }
 
 .input-wrapper{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
+    @include grid(1fr, 25px);
     margin-bottom: 25px;
 }
 
 .form-input{
-    color: $white-2;
-    font-size: $fs-6;
-    font-weight: $fw-400;
+    @include textStyle($white-2, $fs-6, $fw-400);
     padding: 13px 20px;
     border: 1px solid $jet;
     border-radius: 14px;
     outline: none;
-}
-
-.form-input::placeholder{
-    font-weight: $fw-500;
-}
-
-.form-input:focus{
-    border-color: $orange-yellow-crayola;
+    &::placeholder{
+        font-weight: $fw-500;
+    }
+    &:focus{
+        border-color: $orange-yellow-crayola;
+        &:invalid{
+            border-color: $bittersweet-shimmer;
+        }
+    }
 }
 
 textarea.form-input{
@@ -64,63 +57,39 @@ textarea.form-input::-webkit-resizer{
     display: none;
 }
 
-.form-input:focus:invalid{
-    border-color: $bittersweet-shimmer;
-}
-
 .form-btn{
-    position: relative;
     width: 100%;
-    background: $bg-gradient-onyx;
+    @include relative($bg-gradient-onyx, 14px, $shadow-3, 1);
     color: $orange-yellow-crayola;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    @include flexbox(center, center, 10px);
     padding: 13px 20px;
-    border-radius: 14px;
-    font-size: $fs-6;
     text-transform: capitalize;
-    box-shadow: $shadow-3;
-    z-index: 1;
     transition: $transition-1;
+    &::before{
+        @include pseudo("", absolute, $bg-gradient-jet, inherit);
+        inset: 1px;
+        z-index: -1;
+        transition: $transition-1;
+    }
+    & ion-icon{
+        font-size: 16px;
+    }
+    &:hover{
+        background: $bg-gradient-yellow-1;
+        &::before{
+            background: $bg-gradient-yellow-2;
+        }
+    }
+    &:disabled{
+        opacity: 0.7;
+        cursor: not-allowed;
+        &:hover{
+            background: $bg-gradient-onyx;
+            &::before{
+                background: $bg-gradient-jet;
+            
+            }
+        }
+    }
 }
-
-.form-btn::before{
-    content: "";
-    position: absolute;
-    inset: 1px;
-    background: $bg-gradient-jet;
-    border-radius: inherit;
-    z-index: -1;
-    transition: $transition-1;
-}
-
-.form-btn ion-icon{
-    font-size: 16px;
-}
-
-.form-btn:hover{
-    background: $bg-gradient-yellow-1;
-}
-
-.form-btn:hover::before{
-    background: $bg-gradient-yellow-2;
-}
-
-.form-btn:disabled{
-    opacity: 0.7;
-    cursor: not-allowed;
-}
-
-.form-btn:disabled:hover{
-    background: $bg-gradient-onyx;
-}
-
-.form-btn:disabled:hover::before{
-    background: $bg-gradient-jet;
-
-}
-
-
 

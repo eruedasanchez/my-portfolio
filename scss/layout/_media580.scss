@@ -245,11 +245,11 @@
     .form-btn{
         font-size: 16px;
         padding: 16px 20px;
+        & ion-icon{
+            font-size: 18px;
+        }
     }
 
-    .form-btn ion-icon{
-        font-size: 18px;
-    }
 
 
 

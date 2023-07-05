@@ -17,6 +17,7 @@
 @mixin relative($bg, $bradius, $bshadow, $zidx){
     position: relative;
     background: $bg;
+    border-radius: $bradius;
     box-shadow: $bshadow;
     z-index: $zidx;
 }
@@ -105,6 +106,11 @@
     line-height: $lheight;
 
 }
+
+// padding: 13px 20px;
+//     border: 1px solid $jet;
+//     border-radius: 14px;
+//     outline: none;
 
 
 // .info-more-btn{
