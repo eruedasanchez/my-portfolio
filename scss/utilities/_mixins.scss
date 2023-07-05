@@ -47,12 +47,38 @@
     border-radius: $bradius;
 }
 
+// .clients-list{
+// scroll-behavior: smooth;
+//     overscroll-behavior-inline: contain;
+//     scroll-snap-type: inline mandatory;
+//     scroll-padding-inline: 25px;
+
 // background: $eerie-black-2;
 //     border: 1px solid $jet;
 //     border-radius: 20px;
 //     padding: 15px;
 //     box-shadow: $shadow-1;
 //     z-index: 1;
+
+// pointer-events: all;
+// visibility: visible;
+
+@mixin posTopLeft($pos, $top, $left){
+    position: $pos;
+    top: $top;
+    left: $left;
+}
+
+@mixin posTopRight($pos, $top, $right){
+    position: $pos;
+    top: $top;
+    right: $right;
+}
+
+@mixin visible($vis, $pevents){
+    visibility: $vis;
+    pointer-events: $pevents;
+}
 
 
 @mixin textStyle($color, $fsize, $fweight){

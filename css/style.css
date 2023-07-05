@@ -408,15 +408,14 @@ main {
   overflow-y: auto;
   overscroll-behavior: contain;
   z-index: 20;
-  pointer-events: none;
-  visibility: hidden; }
-
-.modal-container::-webkit-scrollbar {
-  display: none; }
+  visibility: hidden;
+  pointer-events: none; }
+  .modal-container::-webkit-scrollbar {
+    display: none; }
 
 .modal-container.active {
-  pointer-events: all;
-  visibility: visible; }
+  visibility: visible;
+  pointer-events: all; }
 
 .overlay {
   position: fixed;
@@ -437,44 +436,42 @@ main {
   pointer-events: all; }
 
 .testimonials-modal {
-  background: #1e1e1f;
   position: relative;
+  background: #1e1e1f;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+  z-index: 2;
   padding: 15px;
   margin: 15px 12px;
   border: 1px solid #383838;
-  border-radius: 14px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
   transform: scale(1.2);
   opacity: 0;
-  transition: 0.25s ease;
-  z-index: 2; }
+  transition: 0.25s ease; }
+  .testimonials-modal button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #2b2b2c;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fafafa;
+    font-size: 18px;
+    opacity: 0.7; }
+    .testimonials-modal button:hover {
+      opacity: 1; }
+    .testimonials-modal button:focus {
+      opacity: 1; }
+    .testimonials-modal button ion-icon {
+      --ionicon-stroke-width: 50px; }
 
 .modal-container.active .testimonials-modal {
   transform: scale(1);
   opacity: 1; }
 
-.modal-close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #2b2b2c;
-  border-radius: 8px;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fafafa;
-  font-size: 18px;
-  opacity: 0.7; }
-
-.modal-close-btn:hover, .modal-close-btn:focus {
-  opacity: 1; }
-
-.modal-close-btn ion-icon {
-  --ionicon-stroke-width: 50px; }
-
-.modal-avatar-box {
+.modal-img-wrapper figure {
   background: linear-gradient(to bottom right, #404040 0%, rgba(64, 64, 64, 0) 50%);
   width: max-content;
   border-radius: 14px;
@@ -488,8 +485,8 @@ main {
   margin-bottom: 4px; }
 
 .modal-content time {
-  font-size: 14px;
   color: rgba(214, 214, 214, 0.7);
+  font-size: 14px;
   font-weight: 300;
   margin-bottom: 10px; }
 
@@ -515,18 +512,15 @@ main {
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: 25px; }
-
-.clients-item {
-  min-width: 50%;
-  scroll-snap-align: start; }
-
-.clients-item img {
-  width: 100%;
-  filter: grayscale(1);
-  transition: 0.25s ease; }
-
-.clients-item img:hover {
-  filter: grayscale(0); }
+  .clients-list li {
+    min-width: 50%;
+    scroll-snap-align: start; }
+    .clients-list li a img {
+      width: 100%;
+      filter: grayscale(1);
+      transition: 0.25s ease; }
+      .clients-list li a img:hover {
+        filter: grayscale(0); }
 
 .article-title {
   margin-bottom: 30px; }
@@ -939,7 +933,7 @@ textarea.form-input::-webkit-resizer {
 
 @media (min-width: 450px) {
   /* client */
-  .clients-item {
+  .clients-list li {
     min-width: calc(33.33% -10px); }
   /* portfolio, blog */
   .project-img, .blog-banner-box {
@@ -1055,23 +1049,23 @@ textarea.form-input::-webkit-resizer {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .modal-avatar-box {
-    border-radius: 18px;
-    margin-bottom: 0; }
-  .modal-avatar-box img {
-    width: 65px; }
-  .modal-img-wrapper > img {
-    display: block;
-    flex-grow: 1;
-    width: 35px; }
+    .modal-img-wrapper figure {
+      border-radius: 18px;
+      margin-bottom: 0; }
+      .modal-img-wrapper figure img {
+        width: 65px; }
+    .modal-img-wrapper > img {
+      display: block;
+      flex-grow: 1;
+      width: 35px; }
   /* clients */
   .clients-list {
     gap: 50px;
     margin: 0 -30px;
     padding: 45px;
     scroll-padding-inline: 45px; }
-  .clients-item {
-    min-width: calc(33.33% -35px); }
+    .clients-list li {
+      min-width: calc(33.33% -35px); }
   /* resume */
   .timeline-list {
     margin-left: 65px; }
@@ -1126,7 +1120,7 @@ textarea.form-input::-webkit-resizer {
   .testimonials-modal {
     gap: 35px;
     max-width: 680px; }
-  .modal-avatar-box img {
+  .modal-img-wrapper figure img {
     width: 80px; }
   /* portfolio */
   .article-title {
@@ -1192,7 +1186,7 @@ textarea.form-input::-webkit-resizer {
   .testimonials-list li {
     min-width: calc(50% -  15px); }
   /* clients */
-  .clients-item {
+  .clients-list li {
     min-width: calc(25% - 38px); }
   /* portfolio */
   .project-list {
