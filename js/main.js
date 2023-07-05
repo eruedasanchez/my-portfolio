@@ -2,12 +2,12 @@ import blogs from './blog.json' assert {type: 'json'};
 
 // sidebar variables
 const sidebar = document.getElementById('data-sidebar');
-const sidebarBtn = document.querySelector('#data-sidebar-btn');
+const sidebarBtn = document.getElementById('data-sidebar-btn');
 
 // sidebar toggle functionality for mobile
 
 sidebarBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('active'); // element toogle function
+    sidebar.classList.toggle('active'); 
 });
 
 
@@ -39,29 +39,36 @@ const loadBlogList = (array) => {
 
 loadBlogList(blogs);
 
-const menuSection = document.querySelector('#menu-section');
-const sections = document.querySelectorAll('#menu-section article');
+// Change sections
 
-menuSection.addEventListener('click', (event) => {
-    const id = event.target.dataset.id;
-    console.log(id);
+const navbarLinks = document.querySelectorAll('.navbar-link');
 
-    if(id){
-        sections.forEach((section) => {
-            section.classList.remove('active');
+const sections = [];
+const about = document.querySelector('.about');
+const resume  = document.querySelector('.resume');
+const portfolio = document.querySelector('.portfolio');
+const blog = document.querySelector('.blog');
+const contact = document.querySelector('.contact');
 
-        });
-        const selectedSection = document.getElementById(id);
-        console.log(selectedSection);
-        selectedSection.classList.add('active');
-    }
+sections.push(about);
+sections.push(resume);
+sections.push(portfolio);
+sections.push(blog);
+sections.push(contact);
 
-})
+navbarLinks.forEach(navLink => {
+    navLink.addEventListener('click', (event) => {
+        navbarLinks.forEach(navLink => navLink.classList.remove('active'));
+        event.currentTarget.classList.add('active');
 
-
-
-
-
-
-
+        const sectionSelected = document.querySelector(`.${event.currentTarget.id}`)
+        
+        for(let i=0; i < sections.length; i++){
+            sections[i].classList.remove('active');
+            if(sections[i] === sectionSelected){
+                sectionSelected.classList.add('active');
+            }
+        }
+    });
+});
 

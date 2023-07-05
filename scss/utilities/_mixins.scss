@@ -48,22 +48,6 @@
     border-radius: $bradius;
 }
 
-// .clients-list{
-// scroll-behavior: smooth;
-//     overscroll-behavior-inline: contain;
-//     scroll-snap-type: inline mandatory;
-//     scroll-padding-inline: 25px;
-
-// background: $eerie-black-2;
-//     border: 1px solid $jet;
-//     border-radius: 20px;
-//     padding: 15px;
-//     box-shadow: $shadow-1;
-//     z-index: 1;
-
-// pointer-events: all;
-// visibility: visible;
-
 @mixin posTopLeft($pos, $top, $left){
     position: $pos;
     top: $top;
@@ -80,7 +64,6 @@
     visibility: $vis;
     pointer-events: $pevents;
 }
-
 
 @mixin textStyle($color, $fsize, $fweight){
     color: $color;
@@ -106,44 +89,4 @@
     line-height: $lheight;
 
 }
-
-// padding: 13px 20px;
-//     border: 1px solid $jet;
-//     border-radius: 14px;
-//     outline: none;
-
-
-// .info-more-btn{
-//     position: absolute;
-//     top: -15px;
-//     right: -15px;
-//     border-radius: 0 15px;
-//     font-size: 13px;
- //    color: $orange-yellow-crayola;
-//     background: $bg-gradient-onyx;
-//     padding: 10px;
-//     box-shadow: $shadow-2;
-//     transition: $transition-1;
-//     z-index: 1;
-// }
-
-// position: absolute;
-//             top: 0;
-//             left: 0;
-//             transform: translate(15px, -25px);
-//             background: $bg-gradient-onyx;
-//             border-radius: 14px;
-//             box-shadow: $shadow-1;
-
-// .navbar{
-//     position: fixed;
-//     bottom: 0;
-//     left: 0;
-//     width: 100%;
-//     background: hsla(240, 1%, 17%, 0.75);
-//     backdrop-filter: blur(10%);
-//     border: 1px solid $jet;
-//     border-radius: 12px 12px 0 0;
-//     box-shadow: $shadow-2;
-//     z-index: 5;
 
